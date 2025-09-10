@@ -6,102 +6,71 @@
   <title>HAVEN</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Fade + Glow + Wave */
-    h1 span {
-      display: inline-block;
+    .fade-in {
       opacity: 0;
-      animation: fadeInUp 1s ease forwards, glow 2s ease-in-out infinite, wave 2s ease-in-out infinite;
+      transform: translateY(20px);
+      transition: opacity 1.2s ease, transform 1.2s ease;
     }
-
-    /* Delay each letter slightly for wave + staggered fade */
-    h1 span:nth-child(1) { animation-delay: 0.1s; }
-    h1 span:nth-child(2) { animation-delay: 0.2s; }
-    h1 span:nth-child(3) { animation-delay: 0.3s; }
-    h1 span:nth-child(4) { animation-delay: 0.4s; }
-    h1 span:nth-child(5) { animation-delay: 0.5s; }
-    h1 span:nth-child(6) { animation-delay: 0.6s; }
-    h1 span:nth-child(7) { animation-delay: 0.7s; }
-    h1 span:nth-child(8) { animation-delay: 0.8s; }
-    h1 span:nth-child(9) { animation-delay: 0.9s; }
-    h1 span:nth-child(10) { animation-delay: 1s; }
-    h1 span:nth-child(11) { animation-delay: 1.1s; }
-    h1 span:nth-child(12) { animation-delay: 1.2s; }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes glow {
-      0%, 100% { text-shadow: 0 0 5px #ff7efc, 0 0 10px #ff4dff, 0 0 20px #ff1aff; }
-      50% { text-shadow: 0 0 10px #b26dff, 0 0 20px #a64dff, 0 0 30px #7f00ff; }
-    }
-
-    @keyframes wave {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
 <body class="bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white font-sans">
 
   <!-- Hero -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 fade-in">
     <h1 class="text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-400 drop-shadow-lg">
-      <!-- Split letters for animation -->
-      <span>B</span><span>R</span><span>E</span><span>A</span><span>K</span><span>I</span><span>N</span><span>G</span>
-      &nbsp;
-      <span>B</span><span>E</span><span>E</span><span>J</span><span>A</span>
-    </h1>
-    <br>
-    <p class="mt-6 text-xl text-gray-300 max-w-2xl">
+      BREAKING BEEJA
+    </h1><br>
+    <p class="mt-6 text-xl text-gray-300 max-w-2xl fade-in">
       Our team's proposal for M# 2025. <br>
     </p>
-    <a href="#demo" class="mt-8 bg-purple-600 hover:bg-purple-700 transition px-8 py-4 rounded-full text-lg font-semibold shadow-xl">
+    <a href="#demo" class="mt-8 bg-purple-600 hover:bg-purple-700 transition px-8 py-4 rounded-full text-lg font-semibold shadow-xl fade-in">
       View Proposal
     </a>
   </section>
 
   <!-- Problem & Solution -->
-  <section class="py-20 px-8 max-w-5xl mx-auto text-center">
+  <section class="py-20 px-8 max-w-5xl mx-auto text-center fade-in">
     <h2 class="text-4xl font-bold mb-6">🌍 The Problem</h2>
-    <p class="text-gray-300 text-lg">
-      In today’s digital world, staying focused is harder than ever.
-      <br><br>
-      Students and professionals constantly get distracted by phones, social media, or their surroundings.
-      <br><br>
-      Remote workers often struggle without supervision, leading to wasted time and reduced productivity.
-      <br><br>
-      Procrastination builds stress and missed deadlines, while overworking causes burnout and health issues.
-      <br><br>
+    <p class="text-gray-300 text-lg fade-in">
+      In today’s digital world, staying focused is harder than ever.<br><br>
+      Students and professionals constantly get distracted by phones, social media, or their surroundings.<br><br>
+      Remote workers often struggle without supervision, leading to wasted time and reduced productivity.<br><br>
+      Procrastination builds stress and missed deadlines, while overworking causes burnout and health issues.<br><br>
       Result: People lose valuable hours, productivity drops, and mental well-being suffers.
     </p>
 
-    <h2 class="text-4xl font-bold mt-16 mb-6">🌎 The Problem: The Erosion of Our Focus</h2>
-    <p class="text-gray-300 text-lg max-w-4xl mx-auto">
+    <h2 class="text-4xl font-bold mt-16 mb-6 fade-in">🌎 The Problem: The Erosion of Our Focus</h2>
+    <p class="text-gray-300 text-lg max-w-4xl mx-auto fade-in">
       In today's hyper-connected world, deep focus is a constant battle. Students and professionals are ceaselessly pulled by digital notifications, social media, and environmental interruptions. This ceaseless distraction leads to spiraling stress, missed deadlines, and mental fatigue. The result? Hours wasted, productivity plummeting, and a pervasive sense that our attention is no longer truly our own.
     </p>
   </section>
 
   <!-- Features -->
-  <section class="py-20 px-8 bg-gray-800/50">
+  <section class="py-20 px-8 bg-gray-800/50 fade-in">
     <section class="py-20 px-8 max-w-5xl mx-auto text-center">
-      <h2 class="text-4xl font-bold mt-16 mb-6">✨ HAVEN's Core Features</h2>
+      <h2 class="text-4xl font-bold mt-16 mb-6 fade-in">✨ HAVEN's Core Features</h2>
 
       <div class="mt-12 flex flex-col md:flex-row justify-center gap-8 text-left">
-        <div class="p-8 bg-gray-900 rounded-3xl shadow-lg hover:scale-105 transition">
+        <div class="p-8 bg-gray-900 rounded-3xl shadow-lg hover:scale-105 transition fade-in">
           <h3 class="text-xl font-bold text-white mb-2">⚡ Predictive Distraction Shield</h3>
           <p class="text-gray-400">Utilizes webcam and microphone with neural networks to detect impending distractions and focus loss within your defined workspace—<em>before</em> they impact you.</p>
         </div>
-        <div class="p-8 bg-gray-900 rounded-3xl shadow-lg hover:scale-105 transition">
+
+        <div class="p-8 bg-gray-900 rounded-3xl shadow-lg hover:scale-105 transition fade-in">
           <h3 class="text-xl font-bold text-white mb-2">🔒 Active Presence Monitoring</h3>
           <p class="text-gray-400">Detects when you've left your workspace and issues escalating audio alerts if you remain absent, gently guiding you back to focus.</p>
         </div>
-        <div class="p-8 bg-gray-900 rounded-3xl shadow-lg hover:scale-105 transition">
+        
+        <div class="p-8 bg-gray-900 rounded-3xl shadow-lg hover:scale-105 transition fade-in">
           <h3 class="text-xl font-bold text-white mb-2">🧠 Workload Balance Detection</h3>
           <p class="text-gray-400">Intelligently identifies periods of intense, rapid activity to prevent burnout, suggesting timely breaks to maintain sustainable productivity.</p>
         </div>
-        <div class="p-8 bg-gray-900 rounded-3xl shadow-lg hover:scale-105 transition">
+
+        <div class="p-8 bg-gray-900 rounded-3xl shadow-lg hover:scale-105 transition fade-in">
           <h3 class="text-xl font-bold text-white mb-2">📊 Personalized Focus Dashboard</h3>
           <p class="text-gray-400">View detailed analytics on your focused vs. unfocused time and access built-in Pomodoro timers to actively combat procrastination and enhance deep work sessions.</p>
         </div>
@@ -110,9 +79,9 @@
   </section>
 
   <!-- Demo -->
-  <section id="demo" class="py-20 px-8 text-center max-w-5xl mx-auto">
+  <section id="demo" class="py-20 px-8 text-center max-w-5xl mx-auto fade-in">
     <h2 class="text-4xl font-bold mb-8">🎥 Demo</h2>
-    <div class="aspect-video w-full rounded-2xl overflow-hidden shadow-xl">
+    <div class="aspect-video w-full rounded-2xl overflow-hidden shadow-xl fade-in">
       <iframe class="w-full h-full"
         src="https://www.youtube.com/embed/dQw4w9WgXcQ"
         title="Demo Video" allowfullscreen></iframe>
@@ -120,30 +89,30 @@
   </section>
 
   <!-- Team -->
-  <section class="py-20 px-8 bg-gray-800/50">
-    <h2 class="text-4xl font-bold text-center mb-12">👨‍💻 Our Team</h2>
+  <section class="py-20 px-8 bg-gray-800/50 fade-in">
+    <h2 class="text-4xl font-bold text-center mb-12 fade-in">👨‍💻 Our Team</h2>
     <div class="flex flex-wrap justify-center gap-8">
-      <div class="bg-gray-900 p-6 rounded-2xl shadow-md w-60 hover:scale-105 transition">
+      <div class="bg-gray-900 p-6 rounded-2xl shadow-md w-60 hover:scale-105 transition fade-in">
         <img src="ashwath.jpg" alt="team" class="mx-auto rounded-full mb-4">
         <h3 class="font-bold text-xl">Ashwath Patil</h3>
-        <p class="text-gray-400">CSE</p>
+        <p class="text-gray-400">CSE </p>
       </div>
-      <div class="bg-gray-900 p-6 rounded-2xl shadow-md w-60 hover:scale-105 transition">
+      <div class="bg-gray-900 p-6 rounded-2xl shadow-md w-60 hover:scale-105 transition fade-in">
         <img src="advaith.jpg" alt="team" class="mx-auto rounded-full mb-4">
-        <h3 class="font-bold text-xl">Advaith Shetty</h3>
-        <p class="text-gray-400">CPS</p>
+        <h3 class="font-bold text-xl">Advaith Shetty </h3>
+        <p class="text-gray-400">CPS </p>
       </div>
-      <div class="bg-gray-900 p-6 rounded-2xl shadow-md w-60 hover:scale-105 transition">
-        <img src="kennith .jpg" alt="team" class="mx-auto rounded-full mb-4">
+      <div class="bg-gray-900 p-6 rounded-2xl shadow-md w-60 hover:scale-105 transition fade-in">
+        <img src="kennith.jpg" alt="team" class="mx-auto rounded-full mb-4">
         <h3 class="font-bold text-xl">Kenneth Martin</h3>
         <p class="text-gray-400">CSE</p>
       </div>
-      <div class="bg-gray-900 p-6 rounded-2xl shadow-md w-60 hover:scale-105 transition">
+      <div class="bg-gray-900 p-6 rounded-2xl shadow-md w-60 hover:scale-105 transition fade-in">
         <img src="aman.jpg" alt="team" class="mx-auto rounded-full mb-4">
         <h3 class="font-bold text-xl">Aman Anand</h3>
         <p class="text-gray-400">CSE</p>
       </div>
-      <div class="bg-gray-900 p-6 rounded-2xl shadow-md w-60 hover:scale-105 transition">
+      <div class="bg-gray-900 p-6 rounded-2xl shadow-md w-60 hover:scale-105 transition fade-in">
         <img src="nakul.jpg" alt="team" class="mx-auto rounded-full mb-4">
         <h3 class="font-bold text-xl">Timmana Nakul</h3>
         <p class="text-gray-400">CSE</p>
@@ -152,10 +121,28 @@
   </section>
 
   <!-- Footer -->
-  <footer class="py-10 text-center text-gray-500">
+  <footer class="py-10 text-center text-gray-500 fade-in">
     Made with ❤️ at Hackathon 2025
   </footer>
 
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2 };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
 </body>
 </html>
+
 
